@@ -865,14 +865,16 @@ footer{
           <h3>Smart Documents — AP Invoice &amp; Document Management Platform</h3>
           <span class="proj-role">Full Stack</span>
         </div>
-        <p class="proj-sub">Enterprise Internal Platform · AP Invoicing, Document Management &amp; Workflow</p>
+        <p class="proj-sub">Enterprise Internal Platform · AP Invoicing, Document Management &amp; Workflow · SAP B1 Integrated</p>
         <ul class="proj-list">
-          <li>Developed modules across a multi-project .NET solution covering AP invoice processing, document management, approval workflow routing, document viewing, and bulk file upload.</li>
-          <li>Built REST API layers including a dynamic query endpoint, alongside OTP-based authentication and role-mapping user administration.</li>
-          <li>Implemented server-side PDF compression on an iTextSharp and Ghostscript pipeline, with correct process, stream, and handle management for large documents.</li>
-          <li>Delivered a <b>65-issue code review remediation</b> across 37+ files — 13 critical, 17 high, 35 medium — resolving 29 security, 13 performance, and 12 resource-management defects to a clean zero-error build.</li>
-          <li>Hardened authentication and data access with cryptographic OTP generation, parameterised queries, PBKDF2 key derivation, TLS 1.2+ enforcement, CSRF tokens, account lockout, and centralised typed configuration replacing scattered hardcoded settings.</li>
-          <li>Improved throughput by eliminating N+1 query patterns for a <b>~50% reduction in queries</b>, removing synchronous AJAX and blocking filters, and making cache initialisation thread-safe with <code>Lazy&lt;T&gt;</code>.</li>
+          <li>Built a <b>metadata-driven document type engine</b> where grid columns, captions, formatting, summary aggregations, hierarchical filters, and role-based access are configured as data — onboarding new document types without code changes.</li>
+          <li>Implemented <b>Active/Archive data tiering</b> with runtime database switching, resolving filter master data from the live database while serving historical reads from the archive.</li>
+          <li>Delivered <b>SAP Business One integration</b> across invoice and vendor master data, including a token-authenticated API letting SAP attach documents directly against a document key.</li>
+          <li>Engineered a secure document viewer using <b>AES-encrypted URL parameters</b> and an external-site allow list, so links could be shared across systems without exposing internal keys.</li>
+          <li>Designed a compressed per-session result cache serving DevExtreme paging and sorting from memory instead of re-querying SQL, with stored-procedure aggregation for dashboard counts.</li>
+          <li>Built a full-request audit subsystem capturing user, action, client, geolocation, payload sizes, and response timings by wrapping the response stream in a global action filter.</li>
+          <li>Implemented server-side PDF compression on an iTextSharp and Ghostscript subprocess pipeline with configurable quality thresholds and correct process, stream, and handle management.</li>
+          <li>Delivered a <b>65-issue code review remediation</b> across 37+ files — 13 critical, 17 high, 35 medium — resolving 29 security, 13 performance, and 12 resource-management defects to a clean zero-error build, and eliminating N+1 patterns for a <b>~50% reduction in queries</b>.</li>
         </ul>
         <div class="tags">
           <span class="tag">C#</span><span class="tag">.NET Framework 4.8</span><span class="tag">ASP.NET MVC 5</span>
