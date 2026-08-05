@@ -41,8 +41,12 @@ Everything is plain HTML — edit `index.html` directly.
 
 - **Hero stats** — the `data-count` and `data-suffix` attributes drive the animated counters.
   `data-count="500" data-suffix="+"` renders as `500+`.
-- **Projects** — copy an entire `<article class="proj">` block to add another.
-  Add `class="proj feature"` to make one span the full row.
+- **Projects / Freelance** — two sections, `#projects` (enterprise) and `#freelance` (own products).
+  Copy an entire `<article class="proj">` block to add another. Add `class="proj feature"` to make one
+  span the full row. The grid is 2-column at desktop, so keep the number of non-feature cards **even**
+  or the last row will have an empty slot.
+- **Project links** — the `.proj-links` block holds "Live Site" / "Source" buttons.
+  Add `class="plink live"` to highlight a live demo in the accent colour.
 - **Skills** — each `<div class="skill-card">` is one category; `<span class="tag">` is one chip.
 - **Experience** — each `<div class="tl-item">` is one timeline entry.
 - **Contact links** — in the `#contact` section. Update the `mailto:`, `tel:`, and LinkedIn `href`s together
