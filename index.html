@@ -700,8 +700,9 @@ footer{
           <span class="tag">XSS Prevention</span><span class="tag">CSRF Protection</span><span class="tag">CSP Headers</span>
           <span class="tag">Input Validation</span><span class="tag">Parameterised Queries</span>
           <span class="tag">DOMPurify</span><span class="tag">Secure File Upload</span>
-          <span class="tag">Azure Key Vault</span><span class="tag">PBKDF2</span>
+          <span class="tag">PBKDF2</span><span class="tag">AES-256</span>
           <span class="tag">TLS 1.2+</span><span class="tag">Path Traversal &amp; IDOR Prevention</span>
+          <span class="tag">Secure Configuration Management</span>
         </div>
       </div>
 
@@ -870,15 +871,17 @@ footer{
           <li>Built REST API layers including a dynamic query endpoint, alongside OTP-based authentication and role-mapping user administration.</li>
           <li>Implemented server-side PDF compression on an iTextSharp and Ghostscript pipeline, with correct process, stream, and handle management for large documents.</li>
           <li>Delivered a <b>65-issue code review remediation</b> across 37+ files — 13 critical, 17 high, 35 medium — resolving 29 security, 13 performance, and 12 resource-management defects to a clean zero-error build.</li>
-          <li>Hardened the platform with cryptographic OTP generation, parameterised queries, PBKDF2 key derivation, TLS 1.2+ enforcement, CSRF tokens, account lockout, and secrets migrated out of config files into Azure Key Vault.</li>
+          <li>Hardened authentication and data access with cryptographic OTP generation, parameterised queries, PBKDF2 key derivation, TLS 1.2+ enforcement, CSRF tokens, account lockout, and centralised typed configuration replacing scattered hardcoded settings.</li>
           <li>Improved throughput by eliminating N+1 query patterns for a <b>~50% reduction in queries</b>, removing synchronous AJAX and blocking filters, and making cache initialisation thread-safe with <code>Lazy&lt;T&gt;</code>.</li>
         </ul>
         <div class="tags">
-          <span class="tag">C#</span><span class="tag">ASP.NET MVC 5</span><span class="tag">Razor</span>
-          <span class="tag">Entity Framework</span><span class="tag">ADO.NET</span><span class="tag">SQL Server</span>
-          <span class="tag">ASP.NET Identity</span><span class="tag">OWIN</span><span class="tag">REST APIs</span>
-          <span class="tag">iTextSharp</span><span class="tag">Ghostscript</span><span class="tag">DevExtreme</span>
-          <span class="tag">ELMAH</span><span class="tag">log4net</span><span class="tag">Azure Key Vault</span>
+          <span class="tag">C#</span><span class="tag">.NET Framework 4.8</span><span class="tag">ASP.NET MVC 5</span>
+          <span class="tag">ASP.NET Web API</span><span class="tag">Razor</span>
+          <span class="tag">Entity Framework 6 (EDMX)</span><span class="tag">ADO.NET</span>
+          <span class="tag">SQL Server</span><span class="tag">Stored Procedures</span>
+          <span class="tag">ASP.NET Identity</span><span class="tag">OWIN / Katana</span>
+          <span class="tag">DevExtreme</span><span class="tag">iTextSharp</span><span class="tag">Ghostscript.NET</span>
+          <span class="tag">ELMAH</span><span class="tag">log4net</span>
         </div>
       </article>
 
